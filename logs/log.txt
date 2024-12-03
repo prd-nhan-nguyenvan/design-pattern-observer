@@ -1,1 +1,4 @@
 Someone has opened the file: examples/example.txt
+Someone has saved the file: examples/example.txt
+Someone has opened the file: examples/another_example.txt
+Someone has saved the file: examples/another_example.txt
