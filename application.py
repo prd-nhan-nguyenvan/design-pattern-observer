@@ -14,18 +14,36 @@ class Application:
             "logs/log.txt",
             "Someone has saved the file: %s"
         )
+        edit_logger = LoggingListener(
+            "logs/log.txt",
+            "Someone has edited the file: %s"
+        )
+        create_logger = LoggingListener(
+            "logs/log.txt",
+            "Someone has created the file: %s"
+        )
+        delete_logger = LoggingListener(
+            "logs/log.txt",
+            "Someone has deleted the file: %s"
+        )
+
         editor.events.subscribe("open", open_logger)
         editor.events.subscribe("save", save_logger)
+        editor.events.subscribe("edit", edit_logger)
+        editor.events.subscribe("create", create_logger)
+        editor.events.subscribe("delete", delete_logger)
 
         email_alerts = EmailAlertsListener(
             "admin@example.com",
             "Someone has changed the file: %s"
         )
         editor.events.subscribe("save", email_alerts)
-
+      
         # Simulate some actions
-        editor.open_file("examples/example.txt")
-        editor.save_file()
+        BASE_PATH = "examples/"
+        editor.create_file(BASE_PATH + "file.txt")
+        editor.open_file(BASE_PATH + "file.txt")
+        editor.edit_file(BASE_PATH + "file.txt")
 
-        editor.open_file("examples/another_example.txt")
-        editor.save_file()
+        editor.create_file(BASE_PATH + "file2.txt")
+        editor.delete_file()
