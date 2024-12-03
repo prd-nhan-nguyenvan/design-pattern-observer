@@ -1,0 +1,65 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# pytest cache
+.cache/
+
+# mypy
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# PIP
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python coverage reports
+.coverage
+*.coveragerc
+.coverage.*
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+__pycache__/
+
+# Flake8
+.flake8
+
+# Sphinx documentation
+docs/_build/
+
+# Docker
+*.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Other files
+*.swp
+*.swo
+*.swn
