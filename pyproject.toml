@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "observer"
+version = "0.1.0"
+description = ""
+authors = ["Nhan Nguyen Van Khanh <nhan.nguyenvan@paradox.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
